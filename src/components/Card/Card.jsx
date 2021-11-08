@@ -16,6 +16,11 @@ export default class Card extends Component {
     }
     maximizeHandler(){
         this.setState(prevState => ({ maximize: !prevState.maximize }))
+        if (document.body.style.overflow !== "hidden" && !this.state.maximize) {
+        document.body.style.overflow = "hidden";
+        } else {
+        document.body.style.overflowY = "scroll";
+        }
     }
     expandHandler(){
         this.setState(prevState => ({ expand: !prevState.expand }))
