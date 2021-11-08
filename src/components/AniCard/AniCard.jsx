@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Card.css'
+import './AniCard.css'
 import 'material-icons/iconfont/material-icons.css';
 
 export default class Card extends Component {
