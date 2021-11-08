@@ -1,7 +1,7 @@
 :root {
   --ani-card-height: 300px;
   --ani-warning: #f1c40f;
-  --ani-alert: #e67e22;
+  --ani-alert: #e7832c;
   --ani-danger: #e74c3c;
   --ani-secondary: #34495e;
   --ani-purple: #9b59b6;
@@ -15,8 +15,10 @@
   --cut-stone-purple-text: rgba(62, 1, 87, 0.714);
   --cut-stone-danger-text: rgba(53, 7, 1, 0.7);
   --cut-stone-warning-text: rgba(63, 51, 1, 0.801);
+  --cut-stone-alert-text: rgba(59, 28, 1, 0.753);
 }
 /* start of bg-colors */
+
 .ani-bg-warning{
     background: var(--ani-warning);
     color: var(--cut-stone-warning-text);
@@ -27,7 +29,7 @@
 }
 .ani-bg-alert{
     background: var(--ani-alert);
-    color: var(--ani-white);
+    color: var(--cut-stone-alert-text);
 }
 .ani-bg-danger{
     background: var(--ani-danger);
