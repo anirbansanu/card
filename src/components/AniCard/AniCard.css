@@ -18,7 +18,14 @@
   --cut-stone-alert-text: rgba(59, 28, 1, 0.753);
 }
 /* start of bg-colors */
-
+.ani-bg-transparent-txt-white{
+  background-color: transparent;
+  color: rgba(248, 249, 250, 0.712);
+}
+.ani-bg-transparent-txt-black{
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.712);
+}
 .ani-bg-warning{
     background: var(--ani-warning);
     color: var(--cut-stone-warning-text);

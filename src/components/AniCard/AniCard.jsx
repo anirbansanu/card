@@ -2,10 +2,15 @@ import React, { Component } from 'react'
 import './AniCard.css'
 import 'material-icons/iconfont/material-icons.css';
 
-export default class Card extends Component {
+export default class AniCard extends Component {
     constructor(props){
         super(props);
         this.state={
+            tools: {
+                maximizeBtn: this.props.allTools?true:this.props.maximizeBtn?this.props.maximizeBtn:false,
+                expandBtn: this.props.allTools?true:this.props.expandBtn?this.props.expandBtn:false,
+                closeBtn: this.props.allTools?true:this.props.closeBtn?this.props.closeBtn:false
+            },
             maximize: this.props.maximize?this.props.maximize:false,
             expand: this.props.expand?this.props.expand:false,
             close: false
@@ -30,27 +35,26 @@ export default class Card extends Component {
     }
     render() {
         return (
-            <div className={`${this.state.close?"close":"card ani-card"} border-${this.props.headerColor} p-0 ${this.state.maximize?"maximize":"minimize"}`} style={{'--ani-card-height':this.props.height}}>
+            <div className={`${this.props.transparent?this.props.transparent:""} ${this.state.close?"close":"card ani-card"} border-${this.props.headerColor} p-0 ${this.state.maximize?"maximize":"minimize"}`} style={{'--ani-card-height':this.props.height}}>
                 <div className={`card-header pb-0 ani-bg-${this.props.headerColor}`}>
                     <h5 className='card-title fw-bold'>{this.props.title?this.props.title:'Card Title'}</h5>
                     <div className='card-tools'>
-                        {this.state.expand?
-                            <span class="material-icons" onClick={this.expandHandler}>
-                                horizontal_rule
-                            </span>
-                            :<span class="material-icons" onClick={this.expandHandler}>
-                                add
-                            </span>
+                        {   this.state.tools.expandBtn?
+                                this.state.expand?
+                                <span class="material-icons" onClick={this.expandHandler}>{this.props.collapseIcon?this.props.collapseIcon:'horizontal_rule'}</span>
+                                :<span class="material-icons" onClick={this.expandHandler}>{this.props.expandIcon?this.props.expandIcon:'horizontal_rule'}</span>
+                            :""
                         }
                         {
-                            this.state.maximize?
-                            <span class="material-icons" onClick={this.maximizeHandler}>fullscreen_exit</span>:
-                            <span class="material-icons" onClick={this.maximizeHandler}>fullscreen</span>
+                            this.state.tools.maximizeBtn?
+                                this.state.maximize?
+                                <span class="material-icons" onClick={this.maximizeHandler}>fullscreen_exit</span>:
+                                <span class="material-icons" onClick={this.maximizeHandler}>fullscreen</span>:""
                         }
                         {
-                            this.state.close?
-                            "":
-                            <span class="material-icons" onClick={this.closeHandler}>clear</span>
+                            
+                            this.state.tools.closeBtn && !this.state.close?
+                            <span class="material-icons" onClick={this.closeHandler}>clear</span>:""
                         }
                     </div>
                 </div>
