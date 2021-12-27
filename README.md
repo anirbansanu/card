@@ -5,15 +5,7 @@
 
 # How to use it:
   <pre>
-  https://anirbansanu.github.io/c19-tracker/
-  </pre>
-
-  <pre>
-  https://c19-tracker.vercel.app/
-  </pre>
-
-  <pre>
-  https://c19-status.netlify.app/
+  https://anirbansanu.github.io/card/
   </pre>
 
 #### Example Image 
