@@ -16,7 +16,7 @@
   https://anirbansanu.github.io/card/
   </pre>
 
-<img src="https://github.com/anirbansanu/c19-tracker/blob/master/example.png" width="600" />
+<img src="https://raw.githubusercontent.com/anirbansanu/card/master/card_lib.png" width="600" />
 
 # Getting Started with Create React App
 
