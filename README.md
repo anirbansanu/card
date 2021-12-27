@@ -4,11 +4,17 @@
   The library allows your user to minimize, maximize and close your HTML elements. You can choose which of the previous interactions are allowed.
 
 # How to use it:
+  Download AniCard.css and AniCard.jsx and add files to your React project from 
+  <pre>
+  https://github.com/anirbansanu/card/
+  </pre>
+  
+  
+
+#### Example Image 
   <pre>
   https://anirbansanu.github.io/card/
   </pre>
-
-#### Example Image 
 
 <img src="https://github.com/anirbansanu/c19-tracker/blob/master/example.png" width="600" />
 
